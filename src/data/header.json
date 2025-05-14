@@ -1,0 +1,25 @@
+{
+  "header": [
+    {
+      "label": "головна",
+      "href": "home"
+    },
+    {
+      "label": "кухні",
+      "href": "kitchens"
+    },
+    {
+      "label": "шафи",
+      "href": "wardrobes"
+    },
+    {
+      "label": "інше",
+      "href": "others"
+    },
+    {
+      "label": "про нас",
+      "href": "about"
+    }
+  ],
+  "phone": "050-111-22-33"
+}
