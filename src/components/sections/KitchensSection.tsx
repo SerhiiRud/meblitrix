@@ -11,7 +11,7 @@ const KitchensSection = () => {
       <h2 className="pl-48 mb-10 text-white/60 font-bold text-4xl leading-none font-bebas ">
         {sections.kitchens.title}
       </h2>
-      <div className="mb-4 mx-auto container">
+      <div className="mx-auto px-6">
         <Gallery data={data} />
       </div>
       <div className="ml-auto mr-48 w-[700px] text-xl text-white/60 ">

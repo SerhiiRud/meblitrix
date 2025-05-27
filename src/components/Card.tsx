@@ -7,7 +7,7 @@ export type CardProps = {
 
 const Card: React.FC<CardProps> = ({ title, image }) => {
   return (
-    <div className="p-2 hover:scale-103 transition-all duration-350 ease-in-out ">
+    <div className="p-2 hover:scale-103 transition-all duration-350 ease-in-out mb-4">
       <Image
         src={image}
         alt={title}

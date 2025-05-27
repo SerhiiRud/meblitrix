@@ -21,26 +21,31 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full flex justify-between items-center absolute z-10 bg-mainBcg">
-      <div className="container">
-        <div className="flex justify-between items-center w-full py-3 px-5">
+    <header className="w-full items-center absolute z-10 bg-mainBcg">
+      <div className="container w-full mx-auto">
+        <div className="flex justify-between items-center w-full py-3">
           <Link
             href="/"
-            className="text-white font-oswald text-4xl hover-text-shadow transition-all duration-300 ease-in-out"
+            className="text-white font-oswald text-4xl md:text-2xl xl:text-4xl hover-text-shadow transition-all duration-300 ease-in-out"
           >
-            MebliTRIX
+            {headerData.logoName}
           </Link>
 
           <ul
-            className={`flex flex-col transition-all duration-300 ease-in-out sm:flex-row absolute right-0 bg-mainBcg w-screen h-screen sm:h-fit sm:w-fit sm:top-0 sm:relative sm:bg-transparent gap-6 justify-center items-center ${
+            // className={`flex flex-col transition-all duration-300 ease-in-out sm:flex-row absolute right-0 bg-mainBcg w-screen h-screen sm:h-fit sm:w-fit sm:top-0 sm:relative sm:bg-transparent gap-6 justify-center items-center ${
+            //   showMenu ? "top-0" : "-top-[100vh]"
+            // }`}
+            className={`flex flex-col transition-all duration-300 ease-in-out md:flex-row absolute right-0 bg-mainBcg w-screen h-screen md:h-fit md:w-fit md:top-0 md:relative md:bg-transparent gap-6 justify-center items-center ${
               showMenu ? "top-0" : "-top-[100vh]"
             }`}
           >
             {headerData.header.map((item) => (
-              <li key={item.label} className="text-base uppercase text-white  ">
+              <li
+                key={item.label}
+                className="text-xl md:text-base uppercase text-white  "
+              >
                 <ScrollLink
                   to={item.href}
-                  // href={item.href}
                   onClick={closeMenu}
                   className="cursor-pointer hover-text-shadow transition-all duration-300 ease-in-out"
                 >
@@ -50,7 +55,7 @@ const Header = () => {
             ))}
           </ul>
           <div>
-            <div className="text-white sm:hidden z-20 relative">
+            <div className="text-white md:hidden z-20 relative">
               <Hamburger
                 hideOutline={false}
                 toggled={showMenu}
@@ -60,9 +65,9 @@ const Header = () => {
             <div className="flex gap-6">
               <Link
                 href={`tel:${headerData.phone}`}
-                className="sm:block font-oswald hidden border-2 border-white rounded-full px-3 py-1 cursor-pointer text-white hover:bg-white  hover:text-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out"
+                className="md:text-sm md:block font-oswald hidden border-2 border-white rounded-full px-2 xl:px-3 py-1 cursor-pointer text-white hover:bg-white  hover:text-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out"
               >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1 xl:gap-2">
                   <Phone className="h-5 w-5" />
                   <span>{headerData.phone}</span>
                 </div>
@@ -70,11 +75,11 @@ const Header = () => {
 
               <Link
                 href="https://t.me/"
-                className="sm:block font-oswald hidden border-2 border-white rounded-full px-3 py-1 cursor-pointer text-white hover:bg-white  hover:text-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out"
+                className="md:text-sm md:block font-oswald hidden border-2 border-white rounded-full px-2 xl:px-3 py-1 cursor-pointer text-white hover:bg-white  hover:text-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out"
               >
-                <div className="flex gap-2">
+                <div className="flex gap-1 xl:gap-2">
                   <Telegram className="h-6 w-6" />
-                  <span>СПИТАТИ</span>
+                  <span>{headerData.buttonText}</span>
                 </div>
               </Link>
             </div>

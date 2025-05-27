@@ -7,16 +7,41 @@
   }
 }
 
+:root {
+  --swiper-pagination-bottom: 2px;
+  --swiper-navigation-color: rgba(255, 255, 255, 0.6);
+  --swiper-pagination-color: rgba(255, 255, 255, 0.6);
+}
+
 .hover-text-shadow:hover {
   text-shadow: 4px 4px 30px rgba(207, 188, 185, 0.9);
 }
 
-/* .rfm-initial-child-container {
-  gap: 20px;
-} */
-
 @theme {
   --color-mainBcg: #242629;
   /* ... */
+  /* --breakpoint-xs: 620px; */
+  /* ... */
   --background-image-home: url("/images/hero/hero2.png");
+}
+
+@utility container {
+  padding-inline: 20px;
+  margin-inline: auto;
+
+  @variant sm {
+    padding-inline: 20px;
+  }
+
+  @variant md {
+    padding-inline: 30px;
+  }
+
+  @variant lg {
+    padding-inline: 80px;
+  }
+
+  @variant xl {
+    padding-inline: 120px;
+  }
 }
