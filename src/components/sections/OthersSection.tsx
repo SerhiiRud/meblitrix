@@ -14,7 +14,7 @@ const OthersSection = () => {
       <div className="mx-auto px-6">
         <Gallery data={data} />
       </div>
-      <div className="ml-auto mr-48 w-[700px] text-xl text-white/60 ">
+      <div className="ml-auto mr-48 max-w-[700px] text-xl text-white/60 ">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. In est facilis
         cum sequi, necessitatibus deserunt molestias, tenetur incidunt vitae
         explicabo labore dicta consectetur, hic voluptates animi? Modi molestiae
