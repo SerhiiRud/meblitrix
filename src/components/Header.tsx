@@ -2,9 +2,11 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Link as ScrollLink } from "react-scroll";
 import { Twirl as Hamburger } from "hamburger-react";
 
+import Logo from "./Logo";
+import MenuLink from "./MenuLink";
+import { Modal } from "./Modal";
 import Telegram from "/public/icons/telegram.svg";
 import Phone from "/public/icons/phone.svg";
 
@@ -24,38 +26,24 @@ const Header = () => {
     <header className="w-full items-center absolute z-10 bg-mainBcg">
       <div className="container w-full mx-auto">
         <div className="flex justify-between items-center w-full py-3">
-          <Link
-            href="/"
-            className="text-white font-oswald text-4xl md:text-2xl xl:text-4xl hover-text-shadow transition-all duration-300 ease-in-out"
-          >
-            {headerData.logoName}
-          </Link>
-
-          <ul
-            // className={`flex flex-col transition-all duration-300 ease-in-out sm:flex-row absolute right-0 bg-mainBcg w-screen h-screen sm:h-fit sm:w-fit sm:top-0 sm:relative sm:bg-transparent gap-6 justify-center items-center ${
-            //   showMenu ? "top-0" : "-top-[100vh]"
-            // }`}
-            className={`flex flex-col transition-all duration-300 ease-in-out md:flex-row absolute right-0 bg-mainBcg w-screen h-screen md:h-fit md:w-fit md:top-0 md:relative md:bg-transparent gap-6 justify-center items-center ${
-              showMenu ? "top-0" : "-top-[100vh]"
-            }`}
-          >
+          <Logo onClick={closeMenu} />
+          <ul className="absolute right-0 hidden md:flex  md:flex-row  w-screen h-screen md:h-fit md:w-fit md:top-0 md:relative md:bg-transparent gap-6 justify-center items-center transition-all duration-300 ease-in-out bg-mainBcg">
             {headerData.header.map((item) => (
               <li
                 key={item.label}
                 className="text-xl md:text-base uppercase text-white  "
               >
-                <ScrollLink
+                <MenuLink
                   to={item.href}
                   onClick={closeMenu}
+                  text={item.label}
                   className="cursor-pointer hover-text-shadow transition-all duration-300 ease-in-out"
-                >
-                  {item.label}
-                </ScrollLink>
+                />
               </li>
             ))}
           </ul>
           <div>
-            <div className="text-white md:hidden z-20 relative">
+            <div className="text-white md:hidden z-51 relative">
               <Hamburger
                 hideOutline={false}
                 toggled={showMenu}
@@ -86,6 +74,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      {showMenu && <Modal onClick={closeMenu} />}
     </header>
   );
 };

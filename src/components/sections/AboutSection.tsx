@@ -1,4 +1,4 @@
-import Image from "next/image";
+//import Image from "next/image";
 import sections from "@/data/sections.json";
 
 const AboutSection = () => {
@@ -11,13 +11,13 @@ const AboutSection = () => {
         {sections.about.title}
       </h2>
       <div className="flex justify-center gap-6 mx-auto w-[1500px]">
-        <Image
+        {/* <Image
           src="/images/about.jpg"
           alt="про нас"
           width={800}
           height={337}
           className="shadow-lg shadow-slate-950 rounded-lg"
-        />
+        /> */}
         <div className="ml-auto mr-48 w-[700px] text-xl text-white/60 ">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. In est
           facilis cum sequi, necessitatibus deserunt molestias, tenetur incidunt
