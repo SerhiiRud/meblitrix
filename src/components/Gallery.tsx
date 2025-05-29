@@ -1,10 +1,11 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Zoom } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/zoom";
 
 import Card from "@/components/Card";
 
@@ -14,8 +15,9 @@ const Gallery: React.FC<GalleryProps> = ({ data }) => {
   return (
     <div>
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Zoom]}
         loop={true}
+        zoom={true}
         spaceBetween={50}
         slidesPerView={3}
         autoHeight={true}
@@ -37,7 +39,9 @@ const Gallery: React.FC<GalleryProps> = ({ data }) => {
       >
         {data.map(({ title, image }) => (
           <SwiperSlide key={title} className="">
-            <Card title={title} image={image} />
+            <div className="swiper-zoom-container z-10">
+              <Card title={title} image={image} />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

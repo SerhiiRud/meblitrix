@@ -3,6 +3,8 @@ import sections from "@/data/sections.json";
 import data from "@/data/kitchens.json";
 
 const KitchensSection = () => {
+  const textStyles =
+    "mr-6 ml-20 md:ml-auto md:mr-10 xl:mr-24 2xl:mr-48 sm:max-w-[600px] md:max-w-[680px] md:text-base lg:text-xl text-white/60 ";
   return (
     <section
       id="kitchens"
@@ -14,7 +16,7 @@ const KitchensSection = () => {
       <div className="mx-auto px-6">
         <Gallery data={data} />
       </div>
-      <div className="ml-auto mr-48 max-w-[700px] text-xl text-white/60 ">
+      <div className={textStyles}>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. In est facilis
         cum sequi, necessitatibus deserunt molestias, tenetur incidunt vitae
         explicabo labore dicta consectetur, hic voluptates animi? Modi molestiae
