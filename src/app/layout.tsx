@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Oswald } from "next/font/google";
+import clsx from "clsx";
 import "./globals.css";
 import meta from "@/data/meta.json";
 
@@ -37,12 +38,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={oswald.className}>
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+      <body
+        className={clsx(oswald.className, "flex h-full min-h-screen flex-col")}
+      >
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -23,7 +23,8 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full items-center absolute z-10 bg-mainBcg">
+    <header className="w-full items-center absolute bg-mainBcg">
+      {showMenu && <Modal onClick={closeMenu} />}
       <div className="container w-full mx-auto">
         <div className="flex justify-between items-center w-full py-3">
           <Logo onClick={closeMenu} />
@@ -74,7 +75,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {showMenu && <Modal onClick={closeMenu} />}
     </header>
   );
 };

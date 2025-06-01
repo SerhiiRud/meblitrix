@@ -6,13 +6,13 @@ import OthersSection from "@/components/sections/OthersSection";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <HeroSection />
       <KitchensSection />
       <WardrobesSection />
       <OthersSection />
       {/* <AboutSection /> */}
-    </div>
+    </>
   );
 };
 

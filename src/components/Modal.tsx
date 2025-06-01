@@ -8,8 +8,8 @@ type ModalProps = {
 
 export const Modal: React.FC<ModalProps> = ({ onClick }) => {
   return (
-    <div className="fixed left-0 top-0 z-50 h-full w-full overscroll-none backdrop-blur-xl">
-      <div className="flex h-[495px] max-w-[300px] mx-auto flex-col bg-mainBgc px-6 py-5 outline-amber-300 outline-dotted">
+    <div className="overflow-hidden overscroll-none fixed left-0 top-0 h-full w-full z-10 backdrop-blur-xl">
+      <div className="overscroll-none flex flex-col z-10 h-full max-w-[300px] mx-auto px-6 py-5 ">
         <nav className="">
           <ul className="pt-[62px] flex flex-col gap-6 items-center">
             {headerData.header.map((item) => (

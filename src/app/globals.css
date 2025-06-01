@@ -7,6 +7,11 @@
   }
 }
 
+modal {
+  overflow: hidden;
+  overscroll-behavior-block: contain;
+}
+
 :root {
   --swiper-pagination-bottom: 2px;
   --swiper-navigation-color: rgba(255, 255, 255, 0.6);

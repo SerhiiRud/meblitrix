@@ -39,7 +39,7 @@ const Gallery: React.FC<GalleryProps> = ({ data }) => {
       >
         {data.map(({ title, image }) => (
           <SwiperSlide key={title} className="">
-            <div className="swiper-zoom-container z-10">
+            <div className="swiper-zoom-container z-50">
               <Card title={title} image={image} />
             </div>
           </SwiperSlide>
