@@ -2,7 +2,7 @@ import Link from "next/link";
 import headerData from "@/data/header.json";
 
 type LogoProps = {
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 const Logo: React.FC<LogoProps> = ({ onClick }) => {

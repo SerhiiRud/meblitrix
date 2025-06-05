@@ -63,7 +63,7 @@ const Header = () => {
               </Link>
 
               <Link
-                href="https://t.me/"
+                href={headerData.telegram}
                 className="md:text-sm md:block font-oswald hidden border-2 border-white rounded-full px-2 xl:px-3 py-1 cursor-pointer text-white hover:bg-white  hover:text-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out"
               >
                 <div className="flex gap-1 xl:gap-2">
