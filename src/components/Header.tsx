@@ -22,6 +22,9 @@ const Header = () => {
     setShowMenu(false);
   };
 
+  const buttonStyles =
+    "md:text-sm md:block font-oswald hidden md:border-2 border-white rounded-full px-2 xl:px-3 py-1 cursor-pointer text-white hover:bg-white  hover:text-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out";
+
   return (
     <header className="w-full items-center absolute z-10 bg-mainBcg">
       {showMenu && <Modal onClick={closeMenu} />}
@@ -51,27 +54,26 @@ const Header = () => {
                 toggle={toggleMenu}
               />
             </div>
-            <div className="flex gap-6">
-              <Link
-                href={`tel:${headerData.phone}`}
-                className="md:text-sm md:block font-oswald hidden border-2 border-white rounded-full px-2 xl:px-3 py-1 cursor-pointer text-white hover:bg-white  hover:text-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out"
-              >
-                <div className="flex items-center gap-1 xl:gap-2">
-                  <Phone className="h-5 w-5" />
-                  <span>{headerData.phone}</span>
-                </div>
-              </Link>
-
-              <Link
-                href={headerData.telegram}
-                className="md:text-sm md:block font-oswald hidden border-2 border-white rounded-full px-2 xl:px-3 py-1 cursor-pointer text-white hover:bg-white  hover:text-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out"
-              >
-                <div className="flex gap-1 xl:gap-2">
-                  <Telegram className="h-6 w-6" />
-                  <span>{headerData.buttonText}</span>
-                </div>
-              </Link>
-            </div>
+            <ul className="flex gap-6">
+              <li>
+                <Link href={`tel:${headerData.phone}`} className={buttonStyles}>
+                  <div className="flex items-center gap-1 xl:gap-2">
+                    <Phone className="h-5 w-5" />
+                    <span>{headerData.phone}</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href={headerData.telegram} className={buttonStyles}>
+                  <div className="flex gap-1 xl:gap-2">
+                    <Telegram className="h-5 w-5" />
+                    <span className="hidden md:block">
+                      {headerData.buttonText}
+                    </span>
+                  </div>
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
