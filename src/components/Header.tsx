@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   const buttonStyles =
-    "md:text-sm md:block font-oswald hidden rounded-full px-1 py-1 cursor-pointer text-white hover:bg-white  hover:text-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out active:bg-white  active:text-mainBcg active:fill-mainBcg active:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)]";
+    "md:text-sm md:block font-oswald hidden rounded-full px-1 py-1 cursor-pointer text-white hover:bg-white  hover:text-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out active:scale-110";
 
   return (
     <header className="w-full items-center absolute z-10 bg-mainBcg">

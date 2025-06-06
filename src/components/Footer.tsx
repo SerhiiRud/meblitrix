@@ -10,7 +10,7 @@ import headerData from "@/data/header.json";
 
 const Footer = () => {
   const buttonStyles =
-    "md:text-sm md:block font-oswald rounded-full px-1 py-1 cursor-pointer text-white hover:bg-white  hover:text-mainBcg hover:fill-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out active:bg-white  active:text-mainBcg active:fill-mainBcg active:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)]";
+    "md:text-sm md:block font-oswald rounded-full px-1 py-1 cursor-pointer text-white hover:bg-white  hover:text-mainBcg hover:fill-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out active:scale-110";
 
   return (
     <footer className=" overflow-hidden py-14 bg-mainBcg">
