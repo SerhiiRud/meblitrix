@@ -1,3 +1,5 @@
+"use client";
+
 import { Link as ScrollLink } from "react-scroll";
 
 type MenuLinkProps = {
