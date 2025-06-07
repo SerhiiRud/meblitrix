@@ -1,4 +1,4 @@
-//import Image from "next/image";
+import Image from "next/image";
 import sections from "@/data/sections.json";
 
 const AboutSection = () => {
@@ -10,15 +10,15 @@ const AboutSection = () => {
       <h2 className="pl-48 mb-10 text-white/60 font-bold text-4xl leading-none font-bebas ">
         {sections.about.title}
       </h2>
-      <div className="flex justify-center gap-6 mx-auto w-[1500px]">
-        {/* <Image
-          src="/images/about.jpg"
+      <div className="px-6 flex flex-col xl:flex-row justify-between gap-6">
+        <Image
+          src="/images/about.webp"
           alt="про нас"
           width={800}
           height={337}
           className="shadow-lg shadow-slate-950 rounded-lg"
-        /> */}
-        <div className="ml-auto mr-48 w-[700px] text-xl text-white/60 ">
+        />
+        <div className="md:text-base lg:text-xl text-white/60 ">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. In est
           facilis cum sequi, necessitatibus deserunt molestias, tenetur incidunt
           vitae explicabo labore dicta consectetur, hic voluptates animi? Modi
