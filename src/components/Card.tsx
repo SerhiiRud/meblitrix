@@ -11,8 +11,8 @@ const Card: React.FC<CardProps> = ({ title, image }) => {
       <Image
         src={image}
         alt={title}
-        width={1024}
-        height={683}
+        width={1280}
+        height={960}
         className="shadow-lg shadow-slate-950 rounded-lg"
       />
       <div className="ml-10 text-white/60 text-2xl">{title}</div>
